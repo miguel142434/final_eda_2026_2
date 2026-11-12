@@ -1,0 +1,22 @@
+﻿{
+  "base_datos": {
+    "sensitive": false,
+    "type": "string",
+    "value": "final_entregas"
+  },
+  "bucket": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas-final-eda-2026-2"
+  },
+  "tabla": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas"
+  },
+  "workgroup": {
+    "sensitive": false,
+    "type": "string",
+    "value": "final-entregas"
+  }
+}

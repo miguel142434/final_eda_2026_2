@@ -1,0 +1,57 @@
+Terraform used the selected providers to generate the following execution plan.
+Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_athena_workgroup.entregas will be destroyed
+  - resource "aws_athena_workgroup" "entregas" {
+      - arn           = "arn:aws:athena:us-east-1:269737522409:workgroup/final-entregas" -> null
+      - force_destroy = true -> null
+      - id            = "final-entregas" -> null
+      - name          = "final-entregas" -> null
+    }
+
+  # aws_glue_catalog_database.entregas will be destroyed
+  - resource "aws_glue_catalog_database" "entregas" {
+      - arn          = "arn:aws:glue:us-east-1:269737522409:database/final_entregas" -> null
+      - id           = "269737522409:final_entregas" -> null
+      - name         = "final_entregas" -> null
+    }
+
+  # aws_glue_catalog_table.entregas will be destroyed
+  - resource "aws_glue_catalog_table" "entregas" {
+      - arn           = "arn:aws:glue:us-east-1:269737522409:table/final_entregas/entregas" -> null
+      - database_name = "final_entregas" -> null
+      - id            = "269737522409:final_entregas:entregas" -> null
+      - name          = "entregas" -> null
+    }
+
+  # aws_s3_bucket.entregas will be destroyed
+  - resource "aws_s3_bucket" "entregas" {
+      - arn           = "arn:aws:s3:::entregas-final-eda-2026-2" -> null
+      - bucket        = "entregas-final-eda-2026-2" -> null
+      - force_destroy = true -> null
+      - id            = "entregas-final-eda-2026-2" -> null
+    }
+
+  # aws_s3_bucket_public_access_block.entregas will be destroyed
+  - resource "aws_s3_bucket_public_access_block" "entregas" {
+      - bucket        = "entregas-final-eda-2026-2" -> null
+      - id            = "entregas-final-eda-2026-2" -> null
+    }
+
+Plan: 0 to add, 0 to change, 5 to destroy.
+
+aws_s3_bucket_public_access_block.entregas: Destroying... [id=entregas-final-eda-2026-2]
+aws_athena_workgroup.entregas: Destroying... [id=final-entregas]
+aws_glue_catalog_table.entregas: Destroying... [id=269737522409:final_entregas:entregas]
+aws_glue_catalog_table.entregas: Destruction complete after 1s
+aws_glue_catalog_database.entregas: Destroying... [id=269737522409:final_entregas]
+aws_s3_bucket_public_access_block.entregas: Destruction complete after 1s
+aws_glue_catalog_database.entregas: Destruction complete after 0s
+aws_athena_workgroup.entregas: Destruction complete after 1s
+aws_s3_bucket.entregas: Destroying... [id=entregas-final-eda-2026-2]
+aws_s3_bucket.entregas: Destruction complete after 1s
+
+Destroy complete! Resources: 5 destroyed.
